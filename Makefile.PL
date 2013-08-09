@@ -18,9 +18,14 @@ my $meta = {
                             configure => {
                               requires => { "ExtUtils::MakeMaker" => 6.31, "File::ShareDir::Install" => 0.02 },
                             },
+                            runtime => { requires => { Moo => "1.000000" } },
+                            test => {
+                              recommends => { "File::ShareDir" => 0 },
+                              requires   => { "Path::Tiny" => 0.027 },
+                            },
                           },
   "provides"           => {
-                            "TOBYINK::Acme::Acme::Acme" => { file => "lib/TOBYINK/Acme/Acme/Acme.pm", version => 0.001 },
+                            "TOBYINK::Acme::Acme::Acme" => { file => "lib/TOBYINK/Acme/Acme/Acme.pm", version => 0.002 },
                           },
   "release_status"     => "stable",
   "resources"          => {
@@ -30,7 +35,7 @@ my $meta = {
                             homepage   => "https://metacpan.org/release/TOBYINK-Acme-Acme-Acme",
                             license    => ["http://dev.perl.org/licenses/"],
                           },
-  "version"            => 0.001,
+  "version"            => 0.002,
   "x_contributors"     => [],
   "x_provides_scripts" => {},
 };

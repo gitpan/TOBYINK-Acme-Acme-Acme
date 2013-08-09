@@ -5,7 +5,7 @@ use warnings;
 
 BEGIN {
 	$TOBYINK::Acme::Acme::Acme::AUTHORITY = 'cpan:TOBYINK';
-	$TOBYINK::Acme::Acme::Acme::VERSION   = '0.001';
+	$TOBYINK::Acme::Acme::Acme::VERSION   = '0.002';
 }
 
 use Moo;

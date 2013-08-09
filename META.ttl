@@ -2,6 +2,7 @@
 @prefix dc:    <http://purl.org/dc/terms/> .
 @prefix doap:  <http://usefulinc.com/ns/doap#> .
 @prefix doap-changeset: <http://ontologi.es/doap-changeset#> .
+@prefix doap-deps: <http://ontologi.es/doap-deps#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix nfo:   <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -31,6 +32,9 @@
 		nfo:programmingLanguage "Perl";
 	];
 	dc:contributor       <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap-deps:runtime-requirement [ doap-deps:on "Moo 1.000000"^^doap-deps:CpanId ];
+	doap-deps:test-recommendation [ doap-deps:on "File::ShareDir"^^doap-deps:CpanId ];
+	doap-deps:test-requirement [ doap-deps:on "Path::Tiny 0.027"^^doap-deps:CpanId ];
 	doap:bug-database    <http://rt.cpan.org/Dist/Display.html?Queue=TOBYINK-Acme-Acme-Acme>;
 	doap:created         "2013-08-09"^^xsd:date;
 	doap:developer       <http://purl.org/NET/cpan-uri/person/tobyink>;
@@ -40,7 +44,7 @@
 	doap:maintainer      <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:name            "TOBYINK-Acme-Acme-Acme";
 	doap:programming-language "Perl";
-	doap:release         <http://purl.org/NET/cpan-uri/dist/TOBYINK-Acme-Acme-Acme/v_0-001>;
+	doap:release         <http://purl.org/NET/cpan-uri/dist/TOBYINK-Acme-Acme-Acme/v_0-001>, <http://purl.org/NET/cpan-uri/dist/TOBYINK-Acme-Acme-Acme/v_0-002>;
 	doap:shortdesc       "acme".
 
 <http://purl.org/NET/cpan-uri/dist/TOBYINK-Acme-Acme-Acme/v_0-001>
@@ -51,6 +55,20 @@
 	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
 	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/TOBYINK-Acme-Acme-Acme-0.001.tar.gz>;
 	doap:revision        "0.001"^^xsd:string.
+
+<http://purl.org/NET/cpan-uri/dist/TOBYINK-Acme-Acme-Acme/v_0-002>
+	a                    doap:Version;
+	dc:identifier        "TOBYINK-Acme-Acme-Acme-0.002"^^xsd:string;
+	dc:issued            "2013-08-09"^^xsd:date;
+	doap-changeset:changeset [
+		doap-changeset:item [
+			a doap-changeset:Packaging;
+			rdfs:label "Include dependencies!";
+		];
+	];
+	doap-changeset:released-by <http://purl.org/NET/cpan-uri/person/tobyink>;
+	doap:file-release    <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/TOBYINK-Acme-Acme-Acme-0.002.tar.gz>;
+	doap:revision        "0.002"^^xsd:string.
 
 <http://purl.org/NET/cpan-uri/person/tobyink>
 	a                    foaf:Person;
