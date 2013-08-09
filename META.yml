@@ -1,0 +1,32 @@
+---
+abstract: acme
+author:
+  - 'Toby Inkster <tobyink@cpan.org>'
+build_requires: {}
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+  File::ShareDir::Install: 0.02
+dynamic_config: 0
+generated_by: 'Dist::Inkt::Profile::TOBYINK version 0.001, CPAN::Meta::Converter version 2.120921'
+keywords: []
+license: unknown
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: TOBYINK-Acme-Acme-Acme
+no_index:
+  directory:
+    - inc
+    - t
+    - xt
+provides:
+  TOBYINK::Acme::Acme::Acme:
+    file: lib/TOBYINK/Acme/Acme/Acme.pm
+    version: 0.001
+resources:
+  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=TOBYINK-Acme-Acme-Acme
+  homepage: https://metacpan.org/release/TOBYINK-Acme-Acme-Acme
+  license: http://dev.perl.org/licenses/
+version: 0.001
+x_contributors: []
+x_provides_scripts: {}
